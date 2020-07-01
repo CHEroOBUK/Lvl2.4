@@ -1,0 +1,53 @@
+@font-face{
+    -fx-font-family: "SorbonneBQCondensedMedium";
+    src: url("/css/SorbonneBQCondensedMedium.ttf");
+}
+
+#settingsBox {
+    -fx-font-family: "SorbonneBQCondensedMedium";
+    -fx-font-size: 15 px;
+    -fx-background-color: #c5cade;
+}
+
+#volumeButton{
+    -fx-background-image: url("/css/volOff.png");
+    -fx-background-color: transparent;
+}
+
+#sendButton{
+    -fx-background-insets: 0,1,4,5;
+    -fx-background-radius: 9,8,5,4;
+    -fx-font-family: "SorbonneBQCondensedMedium";
+    -fx-font-size: 16px;
+}
+
+#downFrameBox{
+     -fx-border-color: #414761;
+     -fx-border-width: 2;
+     -fx-background-color: #ced4f0;
+}
+
+#textField{
+    -fx-background-size: 100% 100%;
+    -fx-background-color: #ced4f0;
+    -fx-font-size: 18 px;
+    -fx-border-color: #414761;
+    -fx-border-width: 2;
+}
+
+#textArea{
+    -fx-background-color: transparent;
+    -fx-background-image: url("/css/lightBack.jpg");
+    -fx-background-size: 100% 100%;
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #273057;
+}
+
+.viewport{
+    -fx-background-color: transparent;
+}
+
+.content{
+    -fx-background-color: transparent;
+}

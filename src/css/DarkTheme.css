@@ -1,0 +1,72 @@
+@font-face{
+    -fx-font-family: "SorbonneBQCondensedMedium";
+    src: url("/css/SorbonneBQCondensedMedium.ttf");
+}
+
+#settingsBox {
+    -fx-font-family: "SorbonneBQCondensedMedium";
+    -fx-font-size: 15 px;
+    -fx-background-color: #262c45;
+}
+
+#labelLightTheme{
+    -fx-text-fill: #b5c3f5;
+}
+
+#labelDarkTheme{
+    -fx-text-fill: #b5c3f5;
+}
+
+#volumeButton{
+    -fx-background-image: url("/css/volOff.png");
+    -fx-background-color: transparent;
+}
+
+#sendButton{
+    -fx-background-color:
+        linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+        linear-gradient(#020b02, #3a3a3a),
+        linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),
+        linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),
+        linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);
+    -fx-background-insets: 0,1,4,5,6;
+    -fx-background-radius: 9,8,5,4,3;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+#sendLabel{
+    -fx-text-fill: #bcc0cf;
+}
+#downFrameBox{
+     -fx-border-color: #111212;
+     -fx-border-width: 3;
+     -fx-background-color: #262c45;
+}
+
+#textField{
+    -fx-background-size: 100% 100%;
+    -fx-background-color: #292f47;
+    -fx-font-size: 18 px;
+    -fx-border-color: #737575;
+    -fx-border-width: 2;
+    -fx-text-fill: #d5d9e8;
+}
+
+#textArea{
+    -fx-background-color: transparent;
+    -fx-background-image: url("/css/darkBack.jpg");
+    -fx-background-size: 100% 100%;
+
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #d5d9e8;
+}
+
+.viewport{
+    -fx-background-color: transparent;
+}
+
+.content{
+    -fx-background-color: transparent;
+}

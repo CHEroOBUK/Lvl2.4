@@ -1,8 +1,59 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?scenebuilder-stylesheet /css/Style.css?>
+<?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.Pane?>
+
+<VBox fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml/1" VBox.vgrow="ALWAYS" fx:id="mainVB">
+    <stylesheets><URL value="@/css/LightTheme.css"/></stylesheets>
+
+    <HBox alignment="CENTER" prefHeight="25.0" fx:id="settingsBox">
+        <Button prefHeight="25" prefWidth="25" style="-fx-background-radius: 5;
+                                                      -fx-background-size: 100% 100%;
+                                                      -fx-background-repeat: no-repeat;
+                                                      -fx-min-height: 25px;
+                                                      -fx-min-width: 25px;"
+                fx:id="volumeButton" onAction="#volumeOnOff"/>
+        <Pane prefWidth="5.0" />
+        <Label prefHeight="25.0" prefWidth="70.0" text=" Light theme:" fx:id="labelLightTheme"/>
+        <RadioButton prefHeight="25.0" prefWidth="20.0" selected="true" onMousePressed="#setLightTheme">
+            <toggleGroup>
+                <ToggleGroup fx:id="groupRadioButtons"/>
+            </toggleGroup>
+        </RadioButton>
+        <Label prefHeight="25.0" prefWidth="65.0" text="Dark theme:" fx:id="labelDarkTheme"/>
+        <RadioButton prefHeight="31.0" prefWidth="20.0" toggleGroup="$groupRadioButtons" onMousePressed="#setDarkTheme" />
+        <Pane prefWidth="5.0" />
+        <ToggleButton prefHeight="25.0" style="-fx-background-radius: 10;" text="Send by Enter" HBox.hgrow="ALWAYS" onAction="#sendOption" fx:id="toggleSendByEnter"/>
+        <ToggleButton prefHeight="25.0" style="-fx-background-radius: 10;" text="Show sending time" HBox.hgrow="ALWAYS" onAction="#timeOption" fx:id="toggleShowTime"/>
+    </HBox>
+
+    <TextArea VBox.vgrow="ALWAYS" editable="false" fx:id="textArea"/>
+
+    <HBox fx:id="downFrameBox">
+        <TextField prefHeight="57.0" style="-fx-background-radius: 3;" HBox.hgrow="ALWAYS" promptText="Enter your message..." onAction="#customSendOption" fx:id="textField"/>
+        <Button contentDisplay="RIGHT" prefHeight="57.0" prefWidth="118.0" style="-fx-background-radius: 5;" onAction="#sendMsg" fx:id="sendButton">
+            <graphic>
+                <HBox alignment="CENTER" fx:id="boxWithSendButton">
+                    <Label text="Send..." fx:id="sendLabel">
+                    </Label>
+                    <Pane prefWidth="2.0" />
+                    <ImageView>
+                        <Image url="/css/iconMail.png"/>
+                    </ImageView>
+                </HBox>
+            </graphic>
+        </Button>
+    </HBox>
+</VBox>
